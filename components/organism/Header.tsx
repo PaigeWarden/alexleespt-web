@@ -35,9 +35,3 @@ export const Header = () => {
     </HStack>
   );
 }
-  
-
-
-
-
-
