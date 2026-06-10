@@ -26,7 +26,7 @@ const config = defineConfig({
           "300": { value: "#E5E5E7" },
           "500": { value: "#55565A" },
           "700": { value: "#2A2A2D" },
-          "900": { value: "#000000" },
+          "900": { value: "#0A0A0A" },
         },
         accent: {
           "500": { value: "#0D3B4E" },

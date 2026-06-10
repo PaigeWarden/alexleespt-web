@@ -5,14 +5,15 @@ import MenuLinks from "./MenuLink";
 const MobileDrawer = () => {
   return (
     <Drawer.Root>
-      <Drawer.Trigger color="gray.100" mr={4}>
-        <GiHamburgerMenu />
+      <Drawer.Trigger color="gray.100" mr={4} display="flex" alignItems="center">
+        <GiHamburgerMenu size={20}
+        />
       </Drawer.Trigger>
       <Portal>
         <Drawer.Positioner>
           <Drawer.Content backgroundColor="gray.100">
             <Drawer.Header
-              backgroundColor="gray.700"
+              backgroundColor="gray.900"
               color="gray.100"
               borderBottom="5px solid"
               borderColor="brand.500"

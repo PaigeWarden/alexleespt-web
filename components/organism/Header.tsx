@@ -12,7 +12,7 @@ export const Header = () => {
       as="header"
       px={{ base: 4, md: 8, lg: 20 }}
       height="60px"
-      backgroundColor="gray.700"
+      backgroundColor="gray.900"
       borderBottom="5px solid"
       borderColor="brand.500"
       justifyContent="space-between"
