@@ -17,7 +17,7 @@ const MenuLinks = ({ isMobile = false }) => {
           key={item.name}
           href={item.href}
           fontWeight="medium"
-          color={isMobile ? "gray.700" : "gray.100"}
+          color={isMobile ? "gray.900" : "gray.100"}
           _hover={{
             color: "brand.200",
             textDecoration: "underline",

@@ -16,7 +16,9 @@ const config = defineConfig({
         },
         secondary: {
           "100": { value: "#E8DDE0" },
-          "300": { value: "#D7C6CA" },
+          // "300": { value: "rgb(215, 198, 202)" },
+                    "300": { value: "#D7C6CA" },
+
           "500": { value: "#C5ABB2" },
           "700": { value: "#B09098" },
           "900": { value: "#7F5F66" },
@@ -26,7 +28,7 @@ const config = defineConfig({
           "300": { value: "#E5E5E7" },
           "500": { value: "#55565A" },
           "700": { value: "#2A2A2D" },
-          "900": { value: "#000000" },
+          "900": { value: "#0a0a0a" },
         },
         accent: {
           "500": { value: "#0D3B4E" },
