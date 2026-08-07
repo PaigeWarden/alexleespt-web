@@ -1,4 +1,4 @@
-import { Box, Heading, Separator, HStack } from "@chakra-ui/react"
+import { Box, Heading, Separator, SimpleGrid, Container } from "@chakra-ui/react"
 import Panel from "../../../components/atoms/panel/Panel";
 
 const panelData = [
@@ -64,19 +64,13 @@ export const PanelBanner = () => {
         COACHING THAT FITS YOUR GOALS
     </Heading>
     <Separator my={3} borderColor="brand.500" width="20%" size="lg" mx="auto" fontWeight="bold"/>
-    
-<Box
-  display="grid"
-  gridTemplateColumns="repeat(4, 1fr)"
-  gap={4}
-  mx="auto"
-  px={4}
-  ml={4}
->
+    <Container justifyContent="center" alignItems="center" display="flex">
+    <SimpleGrid columns={{base: 1, lg: 4}} gap={8}>
   {panelData.map((panel, index) => (
     <Panel key={index} title={panel.title} description={panel.description} link={panel.link} />
   ))}
-</Box>
+</SimpleGrid>
+</Container>
 </Box>
         );
 }
