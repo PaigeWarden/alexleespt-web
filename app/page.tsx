@@ -3,6 +3,7 @@ import { Box, Text, HStack } from "@chakra-ui/react";
 import HeroBanner from "./features/landing/hero-banner";
 import { PanelBanner } from "./features/landing/panel-banner";
 import AboutPanel from "./features/landing/about-panel";
+import QuestionBanner from "./features/landing/question-banner";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ backgroundColor="brand.500" />
      </HStack>
 </Box>
 <AboutPanel />
+<QuestionBanner />
    </>
   ); 
 }

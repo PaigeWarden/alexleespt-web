@@ -45,11 +45,11 @@ import AboutMeImage from "../../assets/image.png";
 
 export default function AboutPanel() {
   return (
-    <Box bg="secondary.300" py={10} px={{ base: 5, md: 8 }}>
+    <Box bg="secondary.300"  py={10} px={{ base: 5, md: 8 }} >
       <HStack
         maxW="1100px"
         mx="auto"
-        align="flex-start"
+        align={{base: "center", md: "flex-start"}}
         gap={{ base: 8, md: 10 }}
         flexDirection={{ base: "column", md: "row" }}
       >
@@ -65,7 +65,7 @@ export default function AboutPanel() {
 
         <VStack
           w={{ base: "100%", md: "58%" }}
-          align="flex-start"
+          align={{ base: "center", md: "flex-start" }}
           gap={4}
         >
           <Heading
@@ -83,6 +83,7 @@ export default function AboutPanel() {
             fontSize={{ base: "2xl", md: "3xl" }}
             fontWeight="bold"
             lineHeight="1.2"
+            textAlign={{ base: "center", md: "left" }} 
           >
             COACH . MENTOR . MOTIVATOR
           </Text>
@@ -93,6 +94,7 @@ export default function AboutPanel() {
             lineHeight="1.7"
             maxW="500px"
             width={{ base: "100%", md: "80%" }}
+            textAlign={{ base: "center", md: "left" }} 
           >
             I am passionate about helping people build strength,
             confidence and healthy habits that last. My coaching is
