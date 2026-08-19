@@ -16,7 +16,7 @@ export default function Panel({ title, description, link }: PanelProps) {
   return (
     <Box
       bg="secondary.100"
-      borderRadius="md"
+      borderRadius="xl"
       p={4}
       borderColor="brand.500"
       minHeight="200px"

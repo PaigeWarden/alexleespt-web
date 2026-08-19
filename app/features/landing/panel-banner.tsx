@@ -65,7 +65,7 @@ export const PanelBanner = () => {
     </Heading>
     <Separator my={3} borderColor="brand.500" width="20%" size="lg" mx="auto" fontWeight="bold"/>
     <Container justifyContent="center" alignItems="center" display="flex">
-    <SimpleGrid columns={{base: 1, lg: 4}} gap={8}>
+    <SimpleGrid columns={{base: 1, md: 2, lg: 4}} gap={8}>
   {panelData.map((panel, index) => (
     <Panel key={index} title={panel.title} description={panel.description} link={panel.link} />
   ))}
