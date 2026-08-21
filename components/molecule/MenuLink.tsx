@@ -1,4 +1,8 @@
+"use client";
+
 import { HStack, VStack, Link } from "@chakra-ui/react"
+import { usePathname } from "next/navigation";
+
 
 const navItems = [
   { name: "HOME", href: "/" },
@@ -9,15 +13,18 @@ const navItems = [
 
 const MenuLinks = ({ isMobile = false }) => {
   const LinkComponent = isMobile ? VStack : HStack;
+  const pathname = usePathname();
 
   return (
     <LinkComponent gap={isMobile ? 4 : 8} align="center">
-      {navItems.map((item) => (
+      {navItems.map((item) => {
+        const isActive = pathname === item.href;
+        return (
         <Link
           key={item.name}
           href={item.href}
           fontWeight="medium"
-          color={isMobile ? "gray.900" : "gray.100"}
+          color={isActive ? "brand.500" : isMobile ? "gray.900" : "gray.100"}
           _hover={{
             color: "brand.200",
             textDecoration: "underline",
@@ -29,7 +36,8 @@ const MenuLinks = ({ isMobile = false }) => {
         >
           {item.name}
         </Link>
-      ))}
+      )}
+      )}
 
     </LinkComponent>
   );
