@@ -1,38 +1,3 @@
-// import { Box, Heading, HStack, VStack, Text, Button } from "@chakra-ui/react";
-// import AboutMeImage from "../../assets/image.png";
-
-// export default function AboutPanel() {
-//   return (
-//     <Box backgroundColor="secondary.300" p={8}>
-//       <HStack alignItems="start" gap={4}>
-//         <Box
-//           width="40%"
-//           height="280px"
-//           backgroundImage={`url(${AboutMeImage.src})`}
-//           backgroundSize="cover"
-//           borderRadius="md"
-//         />
-//         <VStack width="60%" gap={2} alignItems="start" p={4}>
-//             <Heading as="h2" color="brand.500" fontSize="xl">
-//               ABOUT ALEX
-//             </Heading>
-//             <Text color="gray.900" fontSize="3xl" fontWeight="bold">
-//               COACH . MENTOR . MOTIVATOR
-//             </Text>
-//             <Text color="gray.900" fontSize="md" width="70%" fontWeight="bold">
-//               I am passionate about helping people build strength, confidence
-//               and healthy habits that last. My coaching is built on consistency,
-//               discipline and a plan that works for you.
-//             </Text>
-
-//             <Button variant="solid" backgroundColor="brand.500" color="gray.100" fontWeight="bold" _hover={{ backgroundColor: "brand.600" }} width="50%" mt={6}>
-//             LEARN MORE ABOUT ME
-//             </Button>
-//         </VStack>
-//       </HStack>
-//     </Box>
-//   );
-// }
 import {
   Box,
   Heading,

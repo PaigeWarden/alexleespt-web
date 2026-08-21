@@ -2,7 +2,7 @@ import { HStack, VStack, Link } from "@chakra-ui/react"
 
 const navItems = [
   { name: "HOME", href: "/" },
-  { name: "ABOUT", href: "/about" },
+  { name: "ABOUT", href: "/about-me" },
   { name: "WORK WITH ME", href: "/work-with-me" },
   { name: "CONTACT", href: "/contact" },
 ]
