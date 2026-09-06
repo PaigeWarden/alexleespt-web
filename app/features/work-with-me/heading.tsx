@@ -1,4 +1,4 @@
-import { Box, Container, Heading, Text, Separator } from "@chakra-ui/react";
+import { Box, Heading, Text, Separator } from "@chakra-ui/react";
 // 
 export default function WorkWithMeHero() {
   return (
