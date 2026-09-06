@@ -11,7 +11,7 @@ export const Header = () => {
     <HStack
       as="header"
       px={{ base: 4, md: 8, lg: 20 }}
-      height="60px"
+      height="80px"
       backgroundColor="gray.900"
       borderBottom="5px solid"
       borderColor="brand.500"
@@ -21,8 +21,8 @@ export const Header = () => {
       <Image
         src={Logo}
         alt="Logo"
-        width={80}
-        height={80}
+        width={120}
+        height={120}
         />
 
       <Box display={{ base: "none", md: "block" }}>

@@ -10,7 +10,7 @@ const config = defineConfig({
         brand: {
           "100": { value: "#E688AC" },
           "300": { value: "#D73E79" },
-          "500": { value: "#B71453" },
+          "500": { value: "#AD0043" },
           "700": { value: "#8F103F" },
           "900": { value: "#6A0C30" },
         },
