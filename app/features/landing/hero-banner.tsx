@@ -29,7 +29,7 @@ export default function HeroBanner() {
             fontWeight="bold"
             lineHeight="1.05"
           >
-            STRONG BODY
+            BUILD A BODY
           </Text>
           <Text
             color="gray.100"
@@ -37,12 +37,11 @@ export default function HeroBanner() {
             fontWeight="bold"
             lineHeight="1.05"
           >
-            STRONG MIND
+            YOU'RE PROUD OF
           </Text>
           <Separator my={4} borderColor="brand.500" width="30%" size="lg" />
           <Text color="secondary.500" fontSize="sm" lineHeight="1.6">
-            Personalised one to one training and nutrition, coaching you to
-            become the strongest version of yourself
+            Personalised coaching that fits your lifestyle and supports your goals.
           </Text>
           <Button
             variant="solid"
@@ -100,7 +99,7 @@ export default function HeroBanner() {
             fontWeight="bold"
             lineHeight="1.05"
           >
-            STRONG BODY
+            BUILD A BODY
           </Text>
           <Text
             color="gray.100"
@@ -108,12 +107,11 @@ export default function HeroBanner() {
             fontWeight="bold"
             lineHeight="1.05"
           >
-            STRONG MIND
+            YOU'RE PROUD OF
           </Text>
           <Separator my={4} borderColor="brand.500" width="40%" size="lg" />
           <Text color="secondary.500" fontSize="md" lineHeight="1.6" mb={6}>
-            Personalised one to one training and nutrition, coaching you to
-            become the strongest version of yourself
+            Personalised coaching that fits your lifestyle and supports your goals.
           </Text>
           <Button
             variant="solid"

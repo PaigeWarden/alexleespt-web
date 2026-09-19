@@ -3,28 +3,38 @@ import {
   Container,
   Heading,
   Text,
-  HStack,
   SimpleGrid,
   Separator,
   List,
   ListItem,
-  Icon,
 } from "@chakra-ui/react";
 import { FaCheckCircle } from "react-icons/fa";
 
 const onlineIncludedItems = [
-  "Personalised training programme",
+  "Personalised programme",
+  "Adjustments & progressive overload",
   "Weekly check-ins",
-  "24/7 messaging support",
-  "Progress tracking and adjustments",
-  "Clear structure and guidance",
+  "24/7 support",
+  "Nutritional guidance",
+  "Macro goals",
+  "Structure, guidance & accountability",
 ];
 
 const personalTrainingIncludedItems = [
-  "Personalised training programme",
-  "One to one training sessions",
-  "Inbetween session support",
+  "1-1 Personal Training",
+  "Flexible Pricing Bundles",
 ];
+
+const bundleIncludedItems = [
+  "Personalised programme",
+  "Adjustments & progressive overload",
+  "Weekly check-ins",
+  "24/7 support",
+  "Nutritional guidance",
+  "Macro goals",
+  "Structure, guidance & accountability",
+];
+
 export default function CoachingIntro() {
   return (
     <Box bg="gray.900" color="gray.100" py={{ base: 8, md: 16 }} px={{ base: 4, md: 16
@@ -38,12 +48,11 @@ export default function CoachingIntro() {
             display="flex"
             flexDirection="column"
             alignItems="center"
-            justifyContent="center"
           >
             <Heading as="h2" size="2xl" mb={4}>
               Online Coaching
             </Heading>
-            <Text fontSize="sm" mb={2} fontStyle="italic" alignSelf="flex-start">
+            <Text fontSize="sm" mb={2}  alignSelf="flex-start">
               12 week programme followed by a monthly subscription if you want
               to continue
             </Text>
@@ -84,11 +93,12 @@ export default function CoachingIntro() {
             alignItems="center"
           >
             <Heading as="h2" size="2xl" mb={4}>
-              1-1 Personal Training
+              In-Person Coaching
             </Heading>
-            <Text fontSize="sm" mb={2} fontStyle="italic" alignSelf="flex-start">
-              Need to be a member of the gym group to access this service.
-            </Text>
+            <Box alignSelf="flex-start" mb={2}>
+              <Text fontSize="sm">Location: The Gym Group, Turner Rise (Colchester)</Text>
+              <Text fontSize="sm" fontStyle="italic">Private gym sessions available on request</Text>
+            </Box>
 
             <Separator
               my={2}
@@ -108,6 +118,25 @@ export default function CoachingIntro() {
             </Text>
             <List.Root gap={3} alignSelf="flex-start">
               {personalTrainingIncludedItems.map((item, index) => (
+                <ListItem display="flex" alignItems="center" key={index}>
+                  <Box color="brand.500">
+                    <FaCheckCircle size={18} />
+                  </Box>
+                  <Text ml={2}>{item}</Text>
+                </ListItem>
+              ))}
+            </List.Root>
+            <Text
+             alignSelf="flex-start"
+             fontSize="md"
+             my={4}
+             textAlign="center"
+             fontWeight="bold"
+           >
+             Bundle clients also receive:
+           </Text>
+            <List.Root gap={3} alignSelf="flex-start">
+              {bundleIncludedItems.map((item, index) => (
                 <ListItem display="flex" alignItems="center" key={index}>
                   <Box color="brand.500">
                     <FaCheckCircle size={18} />
