@@ -6,7 +6,7 @@ import {
   Text,
   Button,
 } from "@chakra-ui/react";
-import AboutMeImage from "../../assets/image.png";
+import AboutMeImage from "../../assets/bent-over-row.webp";
 
 export default function AboutPanel() {
   return (
@@ -22,7 +22,7 @@ export default function AboutPanel() {
           w={{ base: "100%", md: "42%" }}
           h={{ base: "260px", md: "300px" }}
           backgroundImage={`url(${AboutMeImage.src})`}
-          backgroundSize="cover"
+          backgroundSize="110%"
           backgroundPosition="center"
           borderRadius="lg"
           flexShrink={0}

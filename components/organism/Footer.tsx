@@ -3,10 +3,12 @@ import { Box, HStack, Text } from "@chakra-ui/react";
 
 export const Footer = () => {
   return (
+    <Box backgroundColor="gray.900" width="100%">
     <HStack
       as="footer"
       height="150px"
-      backgroundColor="gray.900"
+      maxW="1500px"
+      mx="auto"
       justifyContent="space-between"
       width="100%"
       pl={{ base: 4, md: 8, lg: 20 }}
@@ -17,5 +19,6 @@ export const Footer = () => {
     </Text>
     </Box>
     </HStack>
+    </Box>
   );
 }
