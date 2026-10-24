@@ -1,18 +1,32 @@
-import { Box, Heading, Text, Separator } from "@chakra-ui/react";
-// 
+import { Box, Heading, Text, Separator, Grid } from "@chakra-ui/react";
+import  Image  from "next/image";
+import WorkWithMeImage from "../../assets/work-with-me.webp";
 export default function WorkWithMeHero() {
   return (
 <Box
   backgroundColor="secondary.300"
   borderBottom="7px solid"
   borderColor="brand.500"
+  display="flex"
+  justifyContent="center"
 >
-  <Box
-    maxW="6xl"
-    mx={{ base: 4, md: 6, lg: 24 }}
-    px={{ base: 6, md: 10, lg: 12 }}
-    py={{ base: 8, md: 12, lg: 20 }}
+    <Box
+      width="100%"
+      maxW="1500px"
+      mx="auto"
   >
+        <Grid
+          templateColumns={{
+            base: "1fr",
+            md: "1fr 0.75fr",
+            lg: "1.4fr 0.6fr",
+          }}
+          gap={{ base: 4, md: 6, lg: 12 }}
+          py={{ base: 8, md: 12, lg: 16 }}
+          px={{ base: 6, md: 10, lg: 20 }}
+          alignItems="center"
+        >
+          <Box>
     <Text
       color="brand.500"
       fontSize="lg"
@@ -50,7 +64,7 @@ export default function WorkWithMeHero() {
       size="lg"
     />
 
-    <Box maxW="750px">
+    <Box maxW="750px" width="90%">
       <Text
         color="gray.700"
         fontSize={{ base: "md", md: "lg" }}
@@ -58,7 +72,7 @@ export default function WorkWithMeHero() {
         mb={6}
         fontWeight="bold"
       >
-        Whether you're a beginner, somebody that wants to take their
+        Whether you&apos;re a beginner, somebody that wants to take their
         training to the next level or a rider, there is a programme
         designed for you.
       </Text>
@@ -74,6 +88,28 @@ export default function WorkWithMeHero() {
         unrealistic expectations.
       </Text>
     </Box>
+  </Box>
+      <Box
+          position="relative"
+          w="100%"
+          minW={{ base: "100%", xl: "500px" }}
+          h={{ base: "340px", md: '100%' }}
+          overflow="hidden"
+          borderRadius="lg"
+          css={{
+            "& img": {
+              objectPosition: { base: "center 20%", md: "center", lg: "center 10%" },
+            },
+          }}
+        >
+          <Image
+          src={WorkWithMeImage}
+          fill
+          alt="Image of Alex Lees, fitness coach leaning against exercise equipment"
+          style={{ objectFit: "cover", width: "100%", height: "100%" }}
+          />
+        </Box>
+  </Grid>
   </Box>
 </Box>
   )

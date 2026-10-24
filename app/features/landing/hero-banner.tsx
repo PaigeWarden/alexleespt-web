@@ -1,9 +1,16 @@
-import { Box, Text, Separator, Button } from "@chakra-ui/react";
-import HeroImage from "../../assets/woman-holding-weights-near-barbells1.png";
+import { Box, Text, Separator, Button, VStack } from "@chakra-ui/react";
+import HeroImage from "../../assets/landscape-right.webp";
+import Link from "next/link";
 
 export default function HeroBanner() {
   return (
     <>
+      <link
+        rel="preload"
+        as="image"
+        href={HeroImage.src}
+        fetchPriority="high"
+      />
       {/* Mobile + iPad: stacked */}
       <Box display={{ base: "flex", lg: "none" }} flexDirection="column">
         <Box
@@ -37,13 +44,14 @@ export default function HeroBanner() {
             fontWeight="bold"
             lineHeight="1.05"
           >
-            YOU'RE PROUD OF
+            YOU&apos;RE PROUD OF
           </Text>
           <Separator my={4} borderColor="brand.500" width="30%" size="lg" />
           <Text color="secondary.500" fontSize="sm" lineHeight="1.6">
             Personalised coaching that fits your lifestyle and supports your goals.
           </Text>
           <Button
+            asChild
             variant="solid"
             backgroundColor="brand.500"
             color="gray.100"
@@ -52,77 +60,101 @@ export default function HeroBanner() {
             size="lg"
             _hover={{ backgroundColor: "brand.700" }}
           >
-            CONTACT ME
+            <Link href="/contact-me">CONTACT ME</Link>
           </Button>
-          <Button 
-            variant="ghost" 
-            color="gray.100" mt={4}  
-            _hover={{ backgroundColor: "rgba(215, 198, 202, 0.1)" }} 
-            textDecoration="underline" 
-            textDecorationColor="brand.500" 
-            textUnderlineOffset="5px" 
+          <Button
+            asChild
+            variant="ghost"
+            color="gray.100" mt={4}
+            _hover={{ backgroundColor: "rgba(215, 198, 202, 0.1)" }}
+            textDecoration="underline"
+            textDecorationColor="brand.500"
+            textUnderlineOffset="5px"
             textDecorationThickness="1px"
             p={0}>
-            Learn more about coaching
+            <Link href="/work-with-me">Learn more about working with me</Link>
           </Button>
         </Box>
       </Box>
 
-      {/* Desktop: overlay */}
-      <Box
-        display={{ base: "none", lg: "flex" }}
-        backgroundImage={`url(${HeroImage.src})`}
-        backgroundSize="cover"
-        backgroundPosition="top"
-        maxHeight="620px"
-        width="100%"
-        height={{ lg: "550px", xl: "620px" }}
-        alignItems="center"
-        borderBottom="7px solid"
-        borderColor="brand.500"
-        overflow="hidden"
-      >
+      <Box width="100%" backgroundColor="gray.900">
         <Box
-          width={{ lg: "50%", xl: "40%" }}
-          backgroundColor="rgba(10, 10, 10, 0.85)"
-          borderRadius={10}
-          mx={8}
-          py={8}
-          px={6}
+          display={{ base: "none", lg: "flex" }}
+          backgroundImage={`linear-gradient(90deg, #0a0a0a 0%, rgba(10, 10, 10, 0.72) 18%, transparent 42%, transparent 72%, #0a0a0a 100%), url(${HeroImage.src})`}
+          backgroundSize="cover"
+          backgroundPosition="center top"
+          backgroundRepeat="no-repeat"
+          maxWidth="1520px"
+          mx="auto"
+          width="100%"
+          height={{ lg: "550px", xl: "620px" }}
+          alignItems="center"
+          borderBottom="7px solid"
+          borderColor="brand.500"
+          overflow="hidden"
         >
-          <Text color="secondary.500" fontSize="xs" letterSpacing="wider" mb={3}>
-            TRAIN WITH ALEX
-          </Text>
-          <Text
-            color="brand.500"
-            fontSize={{ lg: "5xl", xl: "6xl" }}
-            fontWeight="bold"
-            lineHeight="1.05"
+          <Box
+            width={{ lg: "50%", xl: "45%" }}
+            backgroundColor="rgba(10, 10, 10, 0.85)"
+            borderRadius={10}
+            mx={8}
+            py={8}
+            px={6}
           >
-            BUILD A BODY
-          </Text>
-          <Text
-            color="gray.100"
-            fontSize={{ lg: "5xl", xl: "6xl" }}
-            fontWeight="bold"
-            lineHeight="1.05"
-          >
-            YOU'RE PROUD OF
-          </Text>
-          <Separator my={4} borderColor="brand.500" width="40%" size="lg" />
-          <Text color="secondary.500" fontSize="md" lineHeight="1.6" mb={6}>
-            Personalised coaching that fits your lifestyle and supports your goals.
-          </Text>
-          <Button
-            variant="solid"
-            backgroundColor="brand.500"
-            color="gray.100"
-            width={{ lg: "80%", xl: "60%" }}
-            size="lg"
-            _hover={{ backgroundColor: "brand.700" }}
-          >
-            CONTACT ME
-          </Button>
+            <Text color="secondary.500" fontSize="xs" letterSpacing="wider" mb={3}>
+              TRAIN WITH ALEX
+            </Text>
+            <Text
+              color="brand.500"
+              fontSize={{ lg: "5xl", xl: "6xl" }}
+              fontWeight="bold"
+              lineHeight="1.05"
+            >
+              BUILD A BODY
+            </Text>
+            <Text
+              color="gray.100"
+              fontSize={{ lg: "5xl", xl: "6xl" }}
+              fontWeight="bold"
+              lineHeight="1.05"
+            >
+              YOU&apos;RE PROUD OF
+            </Text>
+            <Separator my={4} borderColor="brand.500" width="40%" size="lg" />
+            <Text color="secondary.500" fontSize="md" lineHeight="1.6" mb={6}>
+              Personalised coaching that fits your lifestyle and supports your
+              goals.
+            </Text>
+            <VStack gap={2} align="start" width="100%">
+              <Button
+                asChild
+                variant="solid"
+                backgroundColor="brand.500"
+                color="gray.100"
+                width={{ lg: "80%", xl: "60%" }}
+                size="lg"
+                _hover={{ backgroundColor: "brand.700" }}
+              >
+                <Link href="/contact-me">CONTACT ME</Link>
+              </Button>
+              <Button
+                asChild
+                variant="ghost"
+                color="gray.100"
+                _hover={{ backgroundColor: "rgba(215, 198, 202, 0.1)" }}
+                textDecoration="underline"
+                textDecorationColor="brand.500"
+                textUnderlineOffset="5px"
+                textDecorationThickness="1px"
+                p={0}
+                mt={2}
+              >
+                <Link href="/work-with-me">
+                  Learn more about working with me
+                </Link>
+              </Button>
+            </VStack>
+          </Box>
         </Box>
       </Box>
     </>
