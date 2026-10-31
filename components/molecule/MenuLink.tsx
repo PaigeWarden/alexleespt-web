@@ -23,8 +23,12 @@ const MenuLinks = ({ isMobile = false }) => {
         <Link
           key={item.name}
           href={item.href}
-          fontWeight="medium"
-          color={isActive ? "brand.500" : isMobile ? "gray.900" : "gray.100"}
+          fontWeight={isActive ? "700" : "400"}
+          color={ isMobile ? "gray.900" : "gray.100"}
+          textDecoration={isActive ? "underline" : "none"}
+          textDecorationColor={isActive ? "brand.500" : "transparent"}
+          textUnderlineOffset="4px"
+          textDecorationThickness="2px"
           _hover={{
             color: "brand.200",
             textDecoration: "underline",

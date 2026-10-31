@@ -1,10 +1,11 @@
 import { Box, Grid, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import AboutMeImage from "../../assets/image.png";
+import AboutMeImage from "../../assets/bent-over-row.webp";
 
 export default function AboutMeHeading() {
   return (
     <Box bg="secondary.300">
+      <Box maxW="1500px" mx="auto">
       <Grid
         templateColumns={{
           base: "1fr",
@@ -74,7 +75,6 @@ export default function AboutMeHeading() {
             src={AboutMeImage}
             alt="Alex, fitness coach"
             fill
-            sizes="(max-width: 768px) 100vw, 40vw"
             style={{
               objectFit: "cover",
               objectPosition: "center 20%",
@@ -83,6 +83,7 @@ export default function AboutMeHeading() {
           />
         </Box>
       </Grid>
+      </Box>
     </Box>
   );
 }

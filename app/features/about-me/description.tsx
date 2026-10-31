@@ -2,47 +2,33 @@
 
 // export default function AboutMeDescription() {
 //   return (
+//     <Box bg="secondary.300"
+//     display="flex" justifyContent="center">
 //     <Box
-//       bg="secondary.300"
-//     mx={{ base: 4, md: 6, lg: 20 }}
-//     py={{ base: 10, md: 12, lg: 16 }}
+//       maxW="1500px"
+//       mx={{ base: 4, md: 6, lg: 20 }}
+//       py={{ base: 8, md: 12, lg: 16 }}
 //     >
 //       {/* LABEL */}
-//       <Box mb={{ base: 8, md: 10 }}>
-//         <Text
-//           color="brand.500"
-//           fontSize="lg"
-//           fontWeight="700"
-//         >
+//       <Box mb={{ base: 6, md: 10 }}>
+//         <Text color="brand.500" fontSize={{ base: "md", md: "lg" }} fontWeight="700">
 //           MY APPROACH
 //         </Text>
 
-//         <Box
-//           mt={2}
-//           w="55px"
-//           h="1px"
-//           bg="brand.500"
-//         />
+//         <Box mt={2} w="55px" h="1px" bg="brand.500" />
 //       </Box>
 
 //       {/* MAIN CONTENT */}
 //       <Grid
-//         templateColumns={{
-//           base: "1fr",
-//           lg: "1.1fr 0.9fr",
-//         }}
-//         gap={{ base: 8 }}
+//         templateColumns={{ base: "1fr", lg: "1.1fr 0.9fr" }}
+//         gap={{ base: 6, lg: 8 }}
 //       >
 //         {/* LARGE HEADLINE */}
 //         <Text
-//           fontSize={{
-//             base: "3xl",
-//             sm: "4xl",
-//             md: "5xl",
-//           }}
-//           lineHeight="0.95"
+//           fontSize={{ base: "2xl", sm: "3xl", md: "5xl" }}
+//           lineHeight={{ base: "1.15", md: "0.95" }}
 //           fontWeight="900"
-//           letterSpacing="-0.025em"
+//           letterSpacing={{ base: "-0.01em", md: "-0.025em" }}
 //           color="gray.800"
 //           maxW="850px"
 //         >
@@ -56,22 +42,13 @@
 //           borderColor="brand.500"
 //           pl={{ base: 0, lg: 8 }}
 //         >
-//           <Text
-//             fontSize={{ base: "md", md: "lg" }}
-//             lineHeight="1.5"
-//             color="gray.800"
-//           >
+//           <Text fontSize={{ base: "md", md: "lg" }} lineHeight="1.6" color="gray.800">
 //             Now I’m here to help you find yours. I know what it feels like to
 //             want to be stronger, fitter, and more capable, and I understand
 //             how hard it can be to stay consistent.
 //           </Text>
 
-//           <Text
-//             mt={6}
-//             fontSize={{ base: "md", md: "lg" }}
-//             lineHeight="1.5"
-//             color="gray.800"
-//           >
+//           <Text mt={4} fontSize={{ base: "md", md: "lg" }} lineHeight="1.6" color="gray.800">
 //             My approach is simple, structured, and supportive, giving you the
 //             tools to build long-term progress.
 //           </Text>
@@ -80,13 +57,10 @@
 
 //       {/* BOTTOM STATEMENT */}
 //       <Grid
-//         templateColumns={{
-//           base: "1fr",
-//           md: "0.25fr 1fr",
-//         }}
-//         gap={{ base: 5, md: 8 }}
+//         templateColumns={{ base: "1fr", md: "0.25fr 1fr" }}
+//         gap={{ base: 4, md: 8 }}
 //         alignItems="end"
-//         mt={{ base: 10, md: 14 }}
+//         mt={{ base: 8, md: 14 }}
 //       >
 //         <Box
 //           display={{ base: "none", md: "block" }}
@@ -97,104 +71,136 @@
 //         />
 
 //         <Text
-//           fontSize={{
-//             base: "2xl",
-//             sm: "3xl",
-//             md: "4xl"
-//           }}
-//           lineHeight="1"
+//           fontSize={{ base: "xl", sm: "2xl", md: "4xl" }}
+//           lineHeight={{ base: "1.25", md: "1" }}
 //           fontWeight="900"
 //           letterSpacing="-0.02em"
 //           color="brand.500"
 //           maxW="1050px"
-//         > 
+//         >
 //           If you want to feel stronger, move better, and train with confidence, you’re in the right place.
 //         </Text>
 //       </Grid>
 //     </Box>
+//     </Box>
 //   );
 // }
+
 import { Box, Grid, Text } from "@chakra-ui/react";
+import Image from "next/image";
+import RidingImage from "../../assets/alex-riding.webp";
 
 export default function AboutMeDescription() {
   return (
-    <Box
-      bg="secondary.300"
-      mx={{ base: 4, md: 6, lg: 20 }}
-      py={{ base: 8, md: 12, lg: 16 }}
-    >
-      {/* LABEL */}
-      <Box mb={{ base: 6, md: 10 }}>
-        <Text color="brand.500" fontSize={{ base: "md", md: "lg" }} fontWeight="700">
-          MY APPROACH
-        </Text>
-
-        <Box mt={2} w="55px" h="1px" bg="brand.500" />
-      </Box>
-
-      {/* MAIN CONTENT */}
-      <Grid
-        templateColumns={{ base: "1fr", lg: "1.1fr 0.9fr" }}
-        gap={{ base: 6, lg: 8 }}
+    <Box bg="secondary.300"
+      display="flex" justifyContent="center">
+      <Box
+        maxW="1500px"
+        mx={{ base: 4, md: 6, lg: 20 }}
+        py={{ base: 8, md: 12, lg: 16 }}
+        px={{ base: 4, md: 6, lg: 20 }}
       >
-        {/* LARGE HEADLINE */}
-        <Text
-          fontSize={{ base: "2xl", sm: "3xl", md: "5xl" }}
-          lineHeight={{ base: "1.15", md: "0.95" }}
-          fontWeight="900"
-          letterSpacing={{ base: "-0.01em", md: "-0.025em" }}
-          color="gray.800"
-          maxW="850px"
-        >
-          WITH A BACKGROUND AS A PROFESSIONAL DRESSAGE RIDER, I TRAINED WITH
-          PURPOSE.
-        </Text>
-
-        {/* RIGHT COPY */}
-        <Box
-          borderLeft={{ base: "none", lg: "1px solid" }}
-          borderColor="brand.500"
-          pl={{ base: 0, lg: 8 }}
-        >
-          <Text fontSize={{ base: "md", md: "lg" }} lineHeight="1.6" color="gray.800">
-            Now I’m here to help you find yours. I know what it feels like to
-            want to be stronger, fitter, and more capable, and I understand
-            how hard it can be to stay consistent.
+        {/* LABEL */}
+        <Box mb={{ base: 6, md: 10 }}>
+          <Text color="brand.500" fontSize={{ base: "md", md: "lg" }} fontWeight="700">
+            MY APPROACH
           </Text>
 
-          <Text mt={4} fontSize={{ base: "md", md: "lg" }} lineHeight="1.6" color="gray.800">
-            My approach is simple, structured, and supportive, giving you the
-            tools to build long-term progress.
-          </Text>
+          <Box mt={2} w="55px" h="1px" bg="brand.500" />
         </Box>
-      </Grid>
 
-      {/* BOTTOM STATEMENT */}
-      <Grid
-        templateColumns={{ base: "1fr", md: "0.25fr 1fr" }}
-        gap={{ base: 4, md: 8 }}
-        alignItems="end"
-        mt={{ base: 8, md: 14 }}
-      >
-        <Box
-          display={{ base: "none", md: "block" }}
-          h="1px"
-          bg="brand.500"
-          w="100%"
-          mb={2}
-        />
-
-        <Text
-          fontSize={{ base: "xl", sm: "2xl", md: "4xl" }}
-          lineHeight={{ base: "1.25", md: "1" }}
-          fontWeight="900"
-          letterSpacing="-0.02em"
-          color="brand.500"
-          maxW="1050px"
+        {/* MAIN CONTENT */}
+        <Grid
+          templateColumns={{ base: "1fr", xl: "0.8fr 1.2fr" }}
+          gap={{ base: 6, lg: 12 }}
         >
-          If you want to feel stronger, move better, and train with confidence, you’re in the right place.
-        </Text>
-      </Grid>
+          <Box
+            position="relative"
+            w="100%"
+            h={{
+              base: "240px",
+              sm: "280px",
+              md: "300px",
+              lg: "360px",
+            }}
+            overflow="hidden"
+            borderRadius="lg"
+            css={{
+              "& img": {
+                objectPosition: {
+                  base: "center 10%",
+                  md: "center 10%",
+                  lg: "center 10%",
+                },
+              },
+            }}
+          >
+            <Image
+              src={RidingImage}
+              alt="Alex riding a horse"
+              fill
+              style={{ objectFit: "cover" }}
+            />
+          </Box>
+          <Box>
+            {/* LARGE HEADLINE */}
+            <Text
+              fontSize={{ base: "2xl", sm: "3xl", md: "5xl" }}
+              lineHeight={{ base: "1.15", md: "0.95" }}
+              fontWeight="900"
+              letterSpacing={{ base: "-0.01em", md: "-0.025em" }}
+              color="gray.800"
+              maxW="850px"
+              mb={{ base: 4, md: 6 }}
+            >
+              WITH A BACKGROUND AS A PROFESSIONAL DRESSAGE RIDER, I TRAINED WITH
+              PURPOSE.
+            </Text>
+
+            {/* RIGHT COPY */}
+
+            <Text fontSize={{ base: "md", md: "lg" }} lineHeight="1.6" color="gray.800" fontWeight="700">
+              Now I’m here to help you find yours. I know what it feels like to
+              want to be stronger, fitter, and more capable, and I understand
+              how hard it can be to stay consistent.
+            </Text>
+
+            <Text mt={2} fontSize={{ base: "md", md: "lg" }} lineHeight="1.6" color="gray.800" fontWeight="700">
+              My approach is simple, structured, and supportive, giving you the
+              tools to build long-term progress.
+            </Text>
+
+          </Box>
+
+        </Grid>
+
+        {/* BOTTOM STATEMENT */}
+        <Grid
+          templateColumns={{ base: "1fr", md: "0.25fr 1fr" }}
+          gap={{ base: 4, md: 8 }}
+          alignItems="end"
+          mt={{ base: 8, md: 14 }}
+        >
+          <Box
+            display={{ base: "none", md: "block" }}
+            h="1px"
+            bg="brand.500"
+            w="100%"
+            mb={2}
+          />
+
+          <Text
+            fontSize={{ base: "xl", sm: "2xl", md: "4xl" }}
+            lineHeight={{ base: "1.25", md: "1" }}
+            fontWeight="900"
+            letterSpacing="-0.02em"
+            color="brand.500"
+            maxW="1050px"
+          >
+            If you want to feel stronger, move better, and train with confidence, you’re in the right place.
+          </Text>
+        </Grid>
+      </Box>
     </Box>
   );
 }
