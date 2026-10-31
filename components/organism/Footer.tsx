@@ -3,7 +3,12 @@ import { Box, HStack, Text } from "@chakra-ui/react";
 
 export const Footer = () => {
   return (
-    <Box backgroundColor="gray.900" width="100%">
+    <Box
+      style={{
+        backgroundColor: "var(--chakra-colors-gray-900)",
+        width: "100%",
+      }}
+    >
     <HStack
       as="footer"
       height="150px"
