@@ -115,6 +115,7 @@ export default function AboutMeDescription() {
           gap={{ base: 6, lg: 12 }}
         >
           <Box
+            position="relative"
             w="100%"
             h={{
               base: "240px",
@@ -124,8 +125,22 @@ export default function AboutMeDescription() {
             }}
             overflow="hidden"
             borderRadius="lg"
+            css={{
+              "& img": {
+                objectPosition: {
+                  base: "center 10%",
+                  md: "center 10%",
+                  lg: "center 10%",
+                },
+              },
+            }}
           >
-            <Image src={RidingImage} alt="Alex riding a horse" />
+            <Image
+              src={RidingImage}
+              alt="Alex riding a horse"
+              fill
+              style={{ objectFit: "cover" }}
+            />
           </Box>
           <Box>
             {/* LARGE HEADLINE */}

@@ -75,7 +75,6 @@ export default function AboutMeHeading() {
             src={AboutMeImage}
             alt="Alex, fitness coach"
             fill
-            sizes="(max-width: 768px) 100vw, 40vw"
             style={{
               objectFit: "cover",
               objectPosition: "center 20%",
