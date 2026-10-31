@@ -77,7 +77,12 @@ export default function HeroBanner() {
         </Box>
       </Box>
 
-      <Box width="100%" backgroundColor="gray.900">
+      <Box
+        style={{
+          width: "100%",
+          backgroundColor: "var(--chakra-colors-gray-900)",
+        }}
+      >
         <Box
           display={{ base: "none", lg: "flex" }}
           backgroundImage={`linear-gradient(90deg, #0a0a0a 0%, rgba(10, 10, 10, 0.72) 18%, transparent 42%, transparent 72%, #0a0a0a 100%), url(${HeroImage.src})`}

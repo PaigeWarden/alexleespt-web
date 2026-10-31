@@ -34,7 +34,7 @@ export default function WorkWithMeHero() {
       letterSpacing="wider"
       mb={5}
     >
-      WORK WITH ME
+      SERVICES
     </Text>
 
     <Heading
@@ -48,7 +48,7 @@ export default function WorkWithMeHero() {
     >
       Find the coaching
       <br />
-      programme that fits
+      option that fits
       <br />
       <Text as="span" color="brand.500">
         your lifestyle
@@ -58,7 +58,7 @@ export default function WorkWithMeHero() {
     </Heading>
 
     <Separator
-      my={{ base: 8, md: 10 }}
+      my={{ base: 8 }}
       borderColor="brand.500"
       width={{ base: "30%", md: "18%" }}
       size="lg"
@@ -69,23 +69,9 @@ export default function WorkWithMeHero() {
         color="gray.700"
         fontSize={{ base: "md", md: "lg" }}
         lineHeight="1.7"
-        mb={6}
         fontWeight="bold"
       >
-        Whether you&apos;re a beginner, somebody that wants to take their
-        training to the next level or a rider, there is a programme
-        designed for you.
-      </Text>
-
-      <Text
-        color="gray.700"
-        fontSize={{ base: "md", md: "lg" }}
-        lineHeight="1.7"
-        fontWeight="bold"
-      >
-        Every programme is built to help you get stronger, move better,
-        and feel more confident — without overwhelm, confusion, or
-        unrealistic expectations.
+      Whether you want accountability and guidance through online coaching, a personalised training programme, or one off sessions, I'll help you train with confidence.  
       </Text>
     </Box>
   </Box>

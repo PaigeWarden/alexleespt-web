@@ -25,7 +25,7 @@ backgroundColor="brand.500" />
      <Box w={{base: "3", md: "4"}} h={{base: "3", md: "4"}} borderRadius="full" 
 backgroundColor="brand.500" />
      <Text color="gray.100" fontSize={{base: "md", md: "xl"}} fontWeight="bold">
-       Balance
+       Health
      </Text>
      </HStack>
 </Box>
